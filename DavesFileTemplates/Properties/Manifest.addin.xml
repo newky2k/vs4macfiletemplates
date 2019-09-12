@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionModel>
+    <Runtime>
+           <Import file = "Templates/Forms/Forms-ResourceDictionary-Xaml.xft.xml"/>
+           <Import file = "Templates/Forms/ResourceDictionary.xaml"/>
+           <Import file = "Templates/Forms/ResourceDictionary.xaml.cs"/>
+    </Runtime>
+    <Extension path = "/MonoDevelop/Ide/FileTemplates">
+        <FileTemplate id="ResourceDictionary-Xaml" file="Templates/Forms/Forms-ResourceDictionary-Xaml.xft.xml"/>
+    </Extension>
+</ExtensionModel>

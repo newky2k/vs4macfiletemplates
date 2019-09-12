@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>ResourceDictionary - XAML</_Name>
+		<Icon>md-xml-file-icon</Icon>
+		<_Category>Forms</_Category>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a ResourceDictionary with code behind</_Description>
+<!--		<ProjectType>Forms</ProjectType>-->
+		<DefaultFilename>MyDictionary</DefaultFilename>
+		<GroupId>md-xamarin-forms-xaml-resource-dictionary</GroupId>
+	</TemplateConfiguration>
+	
+	<Conditions>
+		<Or>
+			<HasPackageOrReference PackageId="Xamarin.Forms" Assembly="Xamarin.Forms" />
+			<ProjectCapability Name="XamarinForms" />
+		</Or>
+	</Conditions>
+	
+	<!-- Template Content -->
+	<TemplateFiles>
+		<File name="${Name}.xaml" 
+			  DefaultExtension=".xaml" 
+			  AddStandardHeader="False" 
+			  BuildAction="EmbeddedResource"
+			  CustomTool="MSBuild:UpdateDesignTimeXaml"
+			  SubType="Designer"
+			  src="../Forms/ResourceDictionary.xaml"/>
+        <File name="${Name}.xaml.cs" 
+        	  DependsOn="${Name}.xaml" 
+        	  AddStandardHeader="True"
+        	  src="../Forms/ResourceDictionary.xaml.cs"/>
+	</TemplateFiles>
+</Template>
