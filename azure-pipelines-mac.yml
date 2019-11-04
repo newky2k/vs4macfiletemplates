@@ -24,7 +24,8 @@ steps:
   inputs:
     restoreSolution: '**/*.sln'
 
-- task: MSBuild@1
+- task: Bash@3
   inputs:
-    solution: '**/*.sln'
-    configuration: 'Release'
+    targetType: 'inline'
+    script: |
+      msbuild /v:q /nologo /t:Rebuild *.sln
