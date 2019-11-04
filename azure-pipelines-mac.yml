@@ -33,6 +33,7 @@ steps:
   inputs:
     solution: '**/*.sln'
     configuration: 'Release'
+    msbuildArguments: '/p:OutputPath=$(build.artifactstagingdirectory)'
 
 - task: CopyFiles@2
   inputs:
