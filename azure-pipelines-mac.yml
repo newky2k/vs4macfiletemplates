@@ -24,9 +24,7 @@ steps:
   inputs:
     restoreSolution: '**/*.sln'
 
-- task: XamariniOS@2
+- task: MSBuild@1
   inputs:
-    solutionFile: '**/*.sln'
+    solution: '**/*.sln'
     configuration: 'Release'
-    buildForSimulator: true
-    packageApp: false
