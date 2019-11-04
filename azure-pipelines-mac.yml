@@ -36,7 +36,6 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
     Contents: '**/*. mpack'
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
