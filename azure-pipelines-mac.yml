@@ -1,0 +1,48 @@
+# Xamarin.iOS
+# Build a Xamarin.iOS project.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin
+
+trigger:
+- master
+
+pool:
+  vmImage: 'macos-latest'
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Use .Net Core sdk 3.0.x'
+  inputs:
+    version: 3.0.x
+
+- bash: |
+   sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 6_0_0
+   ##/bin/bash -c "sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_18_1"
+   /bin/bash -c "echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_10.3.app;sudo xcode-select --switch /Applications/Xcode_10.3.app/Contents/Developer"
+  displayName: 'Select Xamarin SDK version'
+
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/*.sln'
+
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    configuration: 'Release'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(agent.builddirectory)'
+    Contents: '**/*. mpack'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
