@@ -33,12 +33,11 @@ steps:
   inputs:
     solution: '**/*.sln'
     configuration: 'Release'
-    msbuildArguments: '/p:OutputPath=$(build.artifactstagingdirectory)'
 
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(agent.builddirectory)'
-    Contents: '**/*. mpack'
+    Contents: '**/*.mpack'
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
 
