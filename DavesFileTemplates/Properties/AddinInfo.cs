@@ -30,11 +30,11 @@ using Mono.Addins.Description;
 [assembly: Addin(
     "ExtraFileTemplates",
     Namespace = "ExtraFileTemplates",
-    Version = "1.0",
+    Version = "1.1",
     Url = "https://github.com/newky2k/vs4macfiletemplates"
 )]
 
 [assembly: AddinName("Extra File Templates")]
 [assembly: AddinCategory("IDE extensions")]
-[assembly: AddinDescription("File templates for Visual Studio for Mac \n - ResourceDictionary - Xaml")]
+[assembly: AddinDescription("File templates for Visual Studio for Mac \n - Forms - ResourceDictionary Xaml \n - DSoft.System.Mvvm - ViewModel")]
 [assembly: AddinAuthor("David Humphreys")]

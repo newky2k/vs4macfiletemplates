@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
+    <CreatePackage>true</CreatePackage>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MonoDevelop.Addins" Version="0.4.7" />
