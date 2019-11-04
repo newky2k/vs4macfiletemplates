@@ -29,11 +29,10 @@ steps:
   inputs:
     restoreSolution: '**/*.sln'
 
-- task: Bash@3
+- task: MSBuild@1
   inputs:
-    targetType: 'inline'
-    script: |
-      msbuild /v:q /nologo /t:Rebuild *.sln
+    solution: '**/*.sln'
+    configuration: 'Release'
 
 - task: CopyFiles@2
   inputs:
