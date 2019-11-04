@@ -36,6 +36,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(agent.builddirectory)'
     Contents: '**/*. mpack'
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
