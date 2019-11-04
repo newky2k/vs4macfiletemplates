@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<Template>
+    <TemplateConfiguration>
+        <_Name>ViewModel</_Name>
+        <Icon>md-xml-file-icon</Icon>
+        <_Category>MVVM</_Category>
+        <LanguageName>C#</LanguageName>
+        <_Description>Creates a DSoft.System.Mvvm ViewModel</_Description>
+        <DefaultFilename>MyViewModel</DefaultFilename>
+        <GroupId>md-dsoft-system-mvvm-view-model</GroupId>
+    </TemplateConfiguration>
+    
+    <Conditions>
+       <HasPackageOrReference PackageId="DSoft.System.Mvvm" Assembly="System.Mvvm" />
+    </Conditions>
+    
+    
+    <!-- Template Content -->
+    <TemplateFiles>
+        <File name="${Name}.cs" src="../MVVM/Mvvm-ViewModel.cs"/>
+    </TemplateFiles>
+</Template>

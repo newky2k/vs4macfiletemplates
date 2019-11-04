@@ -4,8 +4,11 @@
            <Import file = "Templates/Forms/Forms-ResourceDictionary-Xaml.xft.xml"/>
            <Import file = "Templates/Forms/ResourceDictionary.xaml"/>
            <Import file = "Templates/Forms/ResourceDictionary.xaml.cs"/>
+           <Import file = "Templates/MVVM/MVVM-ViewModel.xft.xml"/>
+           <Import file = "Templates/MVVM/Mvvm-ViewModel.cs"/>
     </Runtime>
     <Extension path = "/MonoDevelop/Ide/FileTemplates">
         <FileTemplate id="ResourceDictionary-Xaml" file="Templates/Forms/Forms-ResourceDictionary-Xaml.xft.xml"/>
+        <FileTemplate id="Mvvm-ViewModel" file="Templates/MVVM/MVVM-ViewModel.xft.xml"/>
     </Extension>
 </ExtensionModel>

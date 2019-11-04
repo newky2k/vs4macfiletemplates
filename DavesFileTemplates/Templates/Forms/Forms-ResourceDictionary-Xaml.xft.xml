@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <Template>
 	<TemplateConfiguration>
-		<_Name>ResourceDictionary - XAML</_Name>
+		<_Name>Forms ResourceDictionary XAML</_Name>
 		<Icon>md-xml-file-icon</Icon>
 		<_Category>Forms</_Category>
 		<LanguageName>C#</LanguageName>

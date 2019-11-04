@@ -8,9 +8,13 @@
   <ItemGroup>
     <Folder Include="Templates\" />
     <Folder Include="Templates\Forms\" />
+    <Folder Include="Templates\MVVM\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Templates\Forms\ResourceDictionary.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\MVVM\Mvvm-ViewModel.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -21,8 +25,12 @@
     <None Update="Templates\Forms\Forms-ResourceDictionary-Xaml.xft.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Templates\MVVM\MVVM-ViewModel.xft.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Templates\Forms\ResourceDictionary.xaml.cs" />
+    <Compile Remove="Templates\MVVM\Mvvm-ViewModel.cs" />
   </ItemGroup>
 </Project>
